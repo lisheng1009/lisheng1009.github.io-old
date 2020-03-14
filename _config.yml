@@ -5,9 +5,9 @@
 
 # Site
 title: irin's tree hole
-subtitle: mmmmmmmmmm
-description: xxxxxxx
-author: John Doe
+subtitle: wish we coulds always walk in songs & between the minds
+description: unattached
+author: irin
 # Support language: de, en, fr-FR, id, ja, ko, pt-BR, pt, ru, zh-Hans, zh-hk, zh-tw
 language: en
 date_format: '%Y-%m-%d'
@@ -79,7 +79,7 @@ plugins:
 favicon: /assets/favicon.ico
 
 # Set default keywords (Use a comma to separate)
-keywords: "Jekyll, NexT"
+keywords: "irin, cen, shin"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
