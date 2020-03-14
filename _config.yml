@@ -4,17 +4,17 @@
 # ---------------------------------------------------------------
 
 # Site
-title: NexT
-subtitle:
-description:
-author: John Doe
+title: irin's tree hole
+subtitle: wish we could always walk in songs & between the minds
+description: unattached
+author: irin
 # Support language: de, en, fr-FR, id, ja, ko, pt-BR, pt, ru, zh-Hans, zh-hk, zh-tw
 language: en
 date_format: '%Y-%m-%d'
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com' and baseurl as '/child'
-url: https://lisheng1009.github.io/
+url: https://irin.in/
 baseurl:
 permalink: pretty
 
@@ -79,7 +79,7 @@ plugins:
 favicon: /assets/favicon.ico
 
 # Set default keywords (Use a comma to separate)
-keywords: "Jekyll, NexT"
+keywords: "irin, cen, shin"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
