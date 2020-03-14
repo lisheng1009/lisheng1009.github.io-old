@@ -1,18 +1,6 @@
-*.gem
-.bundle
-.sass-cache
 _site
-Gemfile.lock
-
-Thumbs.db
+.sass-cache
 .DS_Store
 
-.rbenv-version
-.rvmrc
-/node_modules
-/yarn-error.log
-yarn.lock
-
-# Ignore Yard Doc
-/doc
-.yardoc/
+# Ignore the config file that's used for gh-pages.
+_config.gh-pages.yml

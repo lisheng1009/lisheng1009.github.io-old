@@ -1,152 +1,86 @@
-# Simple Texture Jekyll Theme
+# Pixyll 中文版
+## 中文版说明
+这是pixyll的汉化版，主要改动如下:
 
-![Gem Version](https://img.shields.io/gem/v/jekyll-theme-simple-texture.svg)
+1. 语言汉化
+2. 加入**多说**评论功能
+3. 加入**百度统计**(可用google统计和百度统计)
+4. fonts.googleapis.com更改为360字体cdn，大幅增加国内访问速度
 
-Simple Texture is a gem-based responsive simple texture styled Jekyll theme for [Jekyll][Jekyll] 3.3 or above,
-which can also be forked as a boilerplate for older versions of Jekyll.
+原版:[pixyll.com](http://www.pixyll.com)
 
-## Demo
+![Pixyll screenshot](https://cloud.githubusercontent.com/assets/1424573/3847467/134aa236-1e66-11e4-8421-4e8c122118dc.png)
 
-- Starter-kit demo:
-<https://yizeng.github.io/jekyll-theme-simple-texture/>
-- My own personal blog: <https://yizeng.me/blog>
+## 使用说明 
 
-![Screenshot - Home](assets/images/screenshots/homepage.png)
+要使用Pixyll，你需要先安装ruby和jekyll
 
-![Screenshot - Blog](assets/images/screenshots/post.png)
+### 安装 Jekyll
 
-## Installation
+你可以使用gem安装Jekyll，若已安装Jeykll，请跳过此步
 
-### As a Jekyll theme gem (Jekyll >= 3.3)
+```
+$ gem install jekyll
+```
 
-If you are creating a new website or blog,
-please follow the commands below first:
+#### 确认 Jekyll 版本
 
-1. Install Jekyll and [Bundler][Bundler]
+确认你的Jekyll版本，因为Pixyll只支持 [Jekyll 2.0 以上版本](http://jekyllrb.com/news/2014/05/06/jekyll-turns-2-0-0/).
 
-       gem install jekyll bundler
+```
+$ jekyll -v
+# This should be jekyll 2.0.0 or later
+```
 
-2. Create a new Jekyll app
+### 下载源码
 
-       jekyll new jekyllapp
+fork 和 clone本repo
 
-3. Enter the new directory
+### 修改配置文件: _config.yml
 
-       cd jekyllapp
+编辑配置文件 `_config.yml` :
 
-4. Then follow the instructions below like existing Jekyll app.
+```yml
+# Site settings
+title: 网站标题
+email: 您的邮箱 
+author: John Otander
+description: "A simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff."
+baseurl: ""
+url: "网站url，如:http://pixyll.com"
 
-Then for existing Jekyll apps,
+# Build settings
+markdown: kramdown
+permalink: pretty
+#每页文章数量
+paginate: 3
+```
 
-1. Install Bundler if haven't done so.
+### 多说评论和百度统计(可选)
+配置多说，和百度统计，如果不需要评论和统计功能，你可以跳过此步
+你需要先注册多说和百度统计账号，然后将相应id填入配置文件即可
+特别注意，百度统计请使用异步js代码
+![百度统计](https://raw.githubusercontent.com/ee0703/pixyll-zh-cn/master/images/bdtjcfg.jpg)
 
-       gem install bundler
+``` yml
+#Duoshuo short Name / 多说的shortname
+duoshuo: 在这里填入你的多说short name
 
-1. Remove Jekyll auto-generated default pages `404.html`, `about.markdown` and `index.markdown` or any your custom layouts or existing theme files.
+#Baidu analytics / 百度统计(异步的js码，注意使用异步版本的)
+baidu_analyze: 百度统计码，如：3908cbb144cf558ba6a823230d653fc22 
+```
 
-1. Remove the existing `Gemfile.lock`.
 
-1. Download the respository [here](https://github.com/yizeng/jekyll-theme-simple-texture/archive/master.zip)
-and locate `starter-kit` folder,
-or download `starter-kit` folder directly [here](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/yizeng/jekyll-theme-simple-texture/tree/master/starter-kit).
+### 运行服务器 Jekyll Serve
 
-1. Put everything in the `starter-kit` in the root directory,
-i.e. `jekyllapp` in this example.
+运行Jekyll服务器
+```
+$ jekyll serve --watch
+```
 
-1. Run `bundle install` to install dependencies.
+用浏览器打开 `localhost:4000`就可以看到网站了.
 
-1. Run Jekyll with `bundle exec jekyll serve`
+### 使用 Github Pages
 
-1. Hack away at <http://localhost:4000>!
+关于如何使用Github pages来host你的网站,可以参考[这里](https://pages.github.com/)
 
-### As a fork
-
-1. Fork the repo [here](https://github.com/yizeng/jekyll-theme-simple-texture#fork-destination-box)
-
-2. Clone the repo just forked.
-
-       git clone git@github.com:[YOUR_USERNAME]/jekyll-theme-simple-texture.git
-
-3. Delete `starter-kit` folder and `jekyll-theme-simple-texture.gemspec` file (they're for people installing via gem)
-
-4. Install Bundler if haven't done so.
-
-       gem install bundler
-
-5. Update the `Gemfile` to look like the following:
-
-   ```ruby
-   source "https://rubygems.org"
-
-   gem "github-pages", group: :jekyll_plugins
-   ```
-
-6. Run `bundle install` to install dependencies.
-
-7. Run Jekyll with `bundle exec jekyll serve`
-
-8. Hack away at <http://localhost:4000>!
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at <https://github.com/yizeng/jekyll-theme-simple-texture>. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
-
-## Credits
-
-- [Jekyll][Jekyll]
-  + [jekyll-feed](https://github.com/jekyll/jekyll-feed)
-  + [jekyll-redirect-from](https://github.com/jekyll/jekyll-redirect-from)
-  + [jekyll-seo-tag](https://github.com/jekyll/jekyll-seo-tag)
-  + [jekyll-sitemap](https://github.com/jekyll/jekyll-sitemap)
-  + [Simple-Jekyll-Search](https://github.com/christian-fei/Simple-Jekyll-Search)
-  + [Jekyll-Bootstrap](http://jekyllbootstrap.com/)
-  + [theme-the-program](https://github.com/jekyllbootstrap/theme-the-program)
-
-- [Sass](http://sass-lang.com/)
-  + [Normalize.css](https://necolas.github.io/normalize.css/)
-  + [Animate.css](https://daneden.github.io/animate.css/)
-  + [Simple Icons](https://simpleicons.org/)
-  + [Noise Texture Generator](http://www.noisetexturegenerator.com/)
-- JavaScript
-  + [cdnjs](https://cdnjs.com/)
-  + [jQuery](https://jquery.com/)
-  + [fullPage.js](https://alvarotrigo.com/fullPage/)
-  + [pace.js](http://github.hubspot.com/pace/docs/welcome/)
-  + [Modernizr](https://modernizr.com/)
-  + [FancyBox](http://fancybox.net/)
-  + [unveil.js](http://luis-almeida.github.io/unveil/)
-- Fonts
-  + [Font Squirrel](https://www.fontsquirrel.com/)
-  + [Bitter](https://fonts.google.com/specimen/Bitter)
-  + [Junge](https://fonts.google.com/specimen/Junge)
-  + [Ubuntu Condensed](https://fonts.google.com/specimen/Ubuntu+Condensed)
-
-## License
-
-The theme is available as open source under the terms of the
-[MIT License](https://github.com/yizeng/jekyll-theme-simple-texture/blob/master/LICENSE).
-
-    MIT License
-
-    Copyright (c) 2017 Yi Zeng
-
-    Permission is hereby granted, free of charge, to any person obtaining a copy
-    of this software and associated documentation files (the "Software"), to deal
-    in the Software without restriction, including without limitation the rights
-    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-    copies of the Software, and to permit persons to whom the Software is
-    furnished to do so, subject to the following conditions:
-
-    The above copyright notice and this permission notice shall be included in all
-    copies or substantial portions of the Software.
-
-    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-    SOFTWARE.
-
-[Jekyll]: http://jekyllrb.com/
-[Bundler]: https://bundler.io/
