@@ -4,7 +4,7 @@
 
 
 
-$scheme    : '{{ site.scheme | default: Muse }}';
+$scheme    : '{{ site.scheme | default: Pisces }}';
 $variables : base $scheme custom;
 $mixins    : base $scheme custom;
 
@@ -19,13 +19,13 @@ $jekyll-config-map : {{ config_map }};
 // Variables Layer
 // --------------------------------------------------
 @import "_variables/base";
-@import "_variables/{{ site.scheme | default: Muse }}";
+@import "_variables/{{ site.scheme | default: Pisces }}";
 @import "_variables/custom";
 
 // Mixins Layer
 // --------------------------------------------------
 @import "_mixins/base";
-@import "_mixins/{{ site.scheme | default: Muse }}";
+@import "_mixins/{{ site.scheme | default: Pisces }}";
 @import "_mixins/custom";
 
 
@@ -45,7 +45,7 @@ $jekyll-config-map : {{ config_map }};
 
 // Schemes Layer
 // --------------------------------------------------
-@import "_schemes/{{ site.scheme | default: Muse }}/index";
+@import "_schemes/{{ site.scheme | default: Pisces }}/index";
 
 
 
