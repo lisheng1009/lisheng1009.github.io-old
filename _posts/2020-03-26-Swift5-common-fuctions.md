@@ -1,3 +1,10 @@
+---
+title: Swift5-common-fuctions
+categories:
+ - Test
+tags:
+---
+
 #### 根据类名转化成类
 ```
 //第一步：获取项目名称
