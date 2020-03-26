@@ -1,7 +1,7 @@
 ---
 title: Swift5-common-fuctions
 categories:
- - Swift
+ - Swift5
 tags:
 ---
 
