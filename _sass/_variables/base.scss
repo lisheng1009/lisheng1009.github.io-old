@@ -100,7 +100,7 @@ $font-size-larger         : $font-size-base + 4px;
 
 // Headings font size
 $font-size-headings-step    : 2px;
-$font-size-headings-base    : 24px;
+$font-size-headings-base    : 28px;
 $font-size-headings-small   : $font-size-headings-base - $font-size-headings-step;
 $font-size-headings-smaller : $font-size-headings-small - $font-size-headings-step;
 $font-size-headings-large   : $font-size-headings-base + $font-size-headings-step;
@@ -283,7 +283,7 @@ $site-author-name-align               : center;
 $site-author-name-weight              : normal;
 
 $site-description-font-size           : 14px;
-$site-description-color               : $grey-dark;
+$site-description-color               : #4C566A;
 $site-description-margin-top          : 5px;
 $site-description-align               : center;
 
