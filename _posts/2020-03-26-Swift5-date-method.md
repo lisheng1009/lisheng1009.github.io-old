@@ -1,3 +1,10 @@
+---
+title: Swift5-date-method
+categories:
+ - Swift5
+tags:
+---
+
 ##### 1.是否为今日
 ```swift
     static func isToday(_ dateString:String) -> Bool {
