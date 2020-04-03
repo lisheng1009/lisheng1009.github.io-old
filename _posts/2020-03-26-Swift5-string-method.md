@@ -1,3 +1,10 @@
+---
+title: Swift5-string-method
+categories:
+ - Swift5
+tags:
+---
+
 #### 1.限制输入位数
 
 ```swift
