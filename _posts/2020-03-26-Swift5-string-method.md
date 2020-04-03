@@ -1,6 +1,6 @@
 #### 1.限制输入位数
 
-```
+```swift
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
         let MAX_LENGHT = 16
@@ -21,7 +21,7 @@ a. 设置键盘类型可以解决:
 
 b. 只允许输入特定字符 例如只允许输入 字母 数字 和一些指定字符.
 
-```
+```swift
 定义一个宏. 限制只能输入这些字符
 let ALPHANUM = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.*%$-+/ "
 
@@ -38,7 +38,7 @@ let ALPHANUM = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.*
 
 b. 判断如果只输入空格则无效
 
-```
+```swift
 为string写一个扩展方法
    var isBlank: Bool {
        let trimmedStr = self.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -52,7 +52,7 @@ b. 判断如果只输入空格则无效
 
 string扩展方法
 
-```
+```swift
     static func addPrefixHolder(placeHoder: String?, length: Int, strSource: String) -> String {
         if placeHoder == nil {
             let lenth = strSource.count
@@ -86,7 +86,7 @@ a. NW-7
 b. CODE39
 
 #### 5. 输入数字要求最多输入两位小数
-```
+```swift
 1. 代码
 func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let futureString: NSMutableString = NSMutableString(string: textField.text!)
@@ -115,7 +115,7 @@ func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange
 ```
 
 #### 6. 初级模糊搜索
-```
+```swift
 场景: tablaview
 baseArray为全部数据
 dataArray为搜索到的数据
@@ -148,7 +148,7 @@ dataArray为搜索到的数据
 
 #### 7.去掉输入联想
 
-```
+```swift
 textField.autocorrectionType = .no
 
 ```
