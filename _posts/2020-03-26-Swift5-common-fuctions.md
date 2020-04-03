@@ -18,7 +18,7 @@ tags:
         self.navigationController?.pushViewController(vc, animated: true)
 ```        
 #### 单例
-```
+```swift
  public class FileManager {
     public static let shared = {
         // ....
