@@ -6,7 +6,7 @@ tags:
 ---
 
 #### 根据类名转化成类
-```
+```swift
 //第一步：获取项目名称
         let clsName = Bundle.main.infoDictionary!["CFBundleExecutable"] as? String 
         print(clsName!)
@@ -30,7 +30,7 @@ tags:
 ```
 
 #### 用户偏好设置
-```
+```swift
 //存
     func setUserDefault(){
         UserDefaults.standard.set("wtf", forKey: "today")
@@ -42,7 +42,7 @@ tags:
     }
 ```
 #### 归档解档
-```
+```swift
 类中: 
 class PersonModel: NSObject,Codable {
     var firstName: String
@@ -91,7 +91,7 @@ class ViewController: UIViewController {
 }
 ```
 #### app之间跳转(DemoB->DemoA)
-```
+```swift
 1.  添加scheme。  target-> info-> URL Types -> URL Scheme写"DemoB"
 2. plist.info 直接添加一个 "LSApplicationQueriesSchemes" 字段  type为Array   item中写入"DemoA"
 3. 代码
@@ -107,7 +107,7 @@ class ViewController: UIViewController {
 <https://qiita.com/MASATO_SSS/items/734da388c9e8f135911e>
 
 #### 播放本地音频
-```
+```swift
 var audioPlayer = AVAudioPlayer()  注意: 必须设置为全局变量
 
     func playSuccessAudio() {
@@ -126,7 +126,7 @@ var audioPlayer = AVAudioPlayer()  注意: 必须设置为全局变量
 ```
 
 #### hex颜色, 16进制颜色
-```
+```swift
 /// Hex String -> UIColor
 extension UIColor {
        convenience init(hexString: String) {
