@@ -1,5 +1,5 @@
 ##### 1.是否为今日
-```
+```swift
     static func isToday(_ dateString:String) -> Bool {
         
         let dateFormatter = DateFormatter()
@@ -12,14 +12,14 @@
 ```
 
 ##### 2.日期间隔
-```
+```swift
     func daysBetweenDate(toDate: Date) -> Int {
         let components = Calendar.current.dateComponents([.day], from: self, to: toDate)
         return components.day ?? 0
     }
 ```
 #### 3. 是否为过去日
-```Swift
+```swift
     static func isBeforeToday(_ dateString:String) -> Bool {
         let fmt = DateFormatter()
         fmt.dateFormat = "yyyy-MM-dd"
@@ -35,7 +35,7 @@
 
 #### 4. 如何避免两位数年份产生的世纪判断错误
 
-```
+```swift
  let fmt = DateFormatter()
  fmt.twoDigitStartDate = Calendar.current.date(from: DateComponents(year: 2000))
 
