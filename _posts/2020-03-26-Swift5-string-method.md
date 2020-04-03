@@ -145,3 +145,10 @@ dataArray为搜索到的数据
         self.tv?.reloadData()
     }
 ```
+
+#### 7.去掉输入联想
+
+```
+textField.autocorrectionType = .no
+
+```
