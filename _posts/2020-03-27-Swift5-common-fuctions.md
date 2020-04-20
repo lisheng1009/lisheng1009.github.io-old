@@ -41,6 +41,30 @@ tags:
         print(s!)
     }
 ```
+
+#### plist存取
+```swift
+存:
+var numberList:[String] = ["1","2","3","4"]
+let putData: NSDictionary = ["List": numberList]
+        let manager = FileManager.default
+        let documentDir = manager.urls(for: .documentDirectory, in: .userDomainMask)[0]
+let url = documentDir.appendingPathComponent("order.plist")
+putData.write(to:url, atomically: true)
+
+取:
+let manager = FileManager.default
+             let documentDir = manager.urls(for: .documentDirectory, in: .userDomainMask)[0]
+             let url = documentDir.appendingPathComponent("order.plist")
+             let plist = NSDictionary(contentsOfFile: url.path)
+             if let order = plist?["List"] {
+                 if (order as AnyObject).count != 0{
+                     
+                 }
+             }
+```
+
+
 #### 归档解档
 ```swift
 类中: 
@@ -176,7 +200,7 @@ extension UIColor {
 ```
 #### 检查是否接入网络
 
-```
+```swift
 func isInternetAvailable() -> Bool
 {
     var zeroAddress = sockaddr_in()
