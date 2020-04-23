@@ -201,6 +201,9 @@ extension UIColor {
 #### 检查是否接入网络
 
 ```swift
+
+import SystemConfiguration
+
 func isInternetAvailable() -> Bool
 {
     var zeroAddress = sockaddr_in()
