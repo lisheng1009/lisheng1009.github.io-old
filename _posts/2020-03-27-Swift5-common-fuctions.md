@@ -41,6 +41,30 @@ tags:
         print(s!)
     }
 ```
+
+#### plist存取
+```swift
+存:
+var numberList:[String] = ["1","2","3","4"]
+let putData: NSDictionary = ["List": numberList]
+        let manager = FileManager.default
+        let documentDir = manager.urls(for: .documentDirectory, in: .userDomainMask)[0]
+let url = documentDir.appendingPathComponent("order.plist")
+putData.write(to:url, atomically: true)
+
+取:
+let manager = FileManager.default
+             let documentDir = manager.urls(for: .documentDirectory, in: .userDomainMask)[0]
+             let url = documentDir.appendingPathComponent("order.plist")
+             let plist = NSDictionary(contentsOfFile: url.path)
+             if let order = plist?["List"] {
+                 if (order as AnyObject).count != 0{
+                     
+                 }
+             }
+```
+
+
 #### 归档解档
 ```swift
 类中: 
@@ -153,6 +177,54 @@ extension UIColor {
     }
 }
 
+
+or
+
+extension UIColor {
+    class func hex (hexStr : NSString, alpha : CGFloat) -> UIColor {
+        let str = hexStr.replacingOccurrences(of: "#", with: "")
+        let scanner = Scanner(string: str as String)
+        var color: UInt32 = 0
+        if scanner.scanHexInt32(&color) {
+            let r = CGFloat((color & 0xFF0000) >> 16) / 255.0
+            let g = CGFloat((color & 0x00FF00) >> 8) / 255.0
+            let b = CGFloat(color & 0x0000FF) / 255.0
+            return UIColor(red:r,green:g,blue:b,alpha:alpha)
+        } else {
+            konsole.log("不正な値だよ")
+            return UIColor.white
+        }
+    }
+}
+
+```
+#### 检查是否接入网络
+
+```swift
+
+import SystemConfiguration
+
+func isInternetAvailable() -> Bool
+{
+    var zeroAddress = sockaddr_in()
+    zeroAddress.sin_len = UInt8(MemoryLayout.size(ofValue: zeroAddress))
+    zeroAddress.sin_family = sa_family_t(AF_INET)
+    
+    let defaultRouteReachability = withUnsafePointer(to: &zeroAddress) {
+        $0.withMemoryRebound(to: sockaddr.self, capacity: 1) {zeroSockAddress in
+            SCNetworkReachabilityCreateWithAddress(nil, zeroSockAddress)
+        }
+    }
+    
+    var flags = SCNetworkReachabilityFlags()
+    if !SCNetworkReachabilityGetFlags(defaultRouteReachability!, &flags) {
+        konsole.log("** netowrk unreachable.")
+        return false
+    }
+    let isReachable = flags.contains(.reachable)
+    let needsConnection = flags.contains(.connectionRequired)
+    return (isReachable && !needsConnection)
+}
 
 ```
 
