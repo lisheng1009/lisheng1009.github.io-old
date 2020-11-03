@@ -1,5 +1,5 @@
 ---
-title: Swift5-common-fuctions
+title: Swift5-basic-review
 categories:
  - Swift5
 tags:
