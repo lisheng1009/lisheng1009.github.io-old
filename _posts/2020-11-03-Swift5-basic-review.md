@@ -27,6 +27,16 @@ age的值 会是a.包含着Int的盒子 b.nil
 
 #### 可选项绑定
 
+```swift
+        if let number = Int("123") {
+            print("字符串转换成整数成功:\(number)")
+            //number是强制解包之后的Int值
+            //number作用域仅限于这个大括号
+        }else{
+            print("字符串转换成整数失败")
+        }
+```
+
 可选项绑定的多个判断不能用&&  要用逗号,
 
 #### 空合并运算符
