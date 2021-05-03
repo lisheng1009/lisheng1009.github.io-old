@@ -5,8 +5,7 @@ categories:
 tags:
 ---
 
-
-1. 自定义UIView 初始化
+自定义UIView 初始化
 
 UIView有两个指定初始化器:
 - (instancetype)initWithFrame:(CGRect)frame NS_DESIGNATED_INITIALIZER;
